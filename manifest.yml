@@ -1,0 +1,10 @@
+---
+applications:
+- name: cb-demo-producer
+  instances: 1
+  health-check-type: none
+  host: cb-demo-producer
+  buildpack: java_buildpack_offline
+  path: target/cb-demo-producer-0.0.1-SNAPSHOT.jar
+  services:
+  - demo-service-registry
